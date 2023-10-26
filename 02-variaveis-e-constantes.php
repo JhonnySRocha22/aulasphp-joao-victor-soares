@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variáveis e Constantes</title>
+
+    <style>
+        p { font-family: Verdana;}
+    
+        .destaque {
+        background-color: yellow;
+        color: red;
+     }
+
+
+
+    </style>
+
 </head>
 <body>
     <h1>Variáveis e Constantes</h1>
@@ -17,7 +30,8 @@ $area = "Back-End";
 
 
 //Saída interpolada
-echo "<p>Estamos no $curso em $ano</p>";
+echo "<p>Estamos no <span class='destaque'>$curso</span> em $ano</p>";
+echo "<p>Estamos no <span class=\"destaque\">$curso</span> em $ano</p>";
 
 //Não dá certo, as variaveis são tratadas como texto
 echo '<p>Estamos no $curso em $ano</p>';
@@ -29,7 +43,7 @@ echo "<p>Estamos no ".$curso." em ".$ano."</p>";
 <hr>
 <!-- Forma de saída ABREVIADA/SIMPLIFICADA -->
 
-<p>Estamos no <?=$curso?> em <?=$ano?></p>
+<p>Estamos no <span class="destaque"><?=$curso?></span> em <?=$ano?></p>
 
 <hr>
 
