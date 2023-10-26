@@ -31,6 +31,24 @@ echo "<p>Estamos no ".$curso." em ".$ano."</p>";
 
 <p>Estamos no <?=$curso?> em <?=$ano?></p>
 
+<hr>
+
+<?php
+//Constantes (recomenda-se dar nome em MAIÚSCULAS)
+//Forma antiga, tradicional 
+define("AUTOR", "João Victor Soares da Rocha");
+//Forma moderna, Atual
+const EMPRESA = "ABC Tecnologia";
+const ANO_FUNDACAO = 2000;
+?>
+
+<!-- Saídas -->
+<p>Autor do site: <?=AUTOR?></p>
+<p>Nome da empresa: <?=EMPRESA?></p>
+<p>Fundada em: <?=ANO_FUNDACAO?></p>
+
+
+
 
 
 
