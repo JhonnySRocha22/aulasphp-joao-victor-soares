@@ -68,7 +68,6 @@ $filme = array(
 
 <pre><?=print_r($bandas)?></pre>
 <pre><?=var_dump($bandas)?></pre>
-
 <pre><?=var_dump($livro)?></pre>
 
 </body>
