@@ -27,8 +27,8 @@ echo "<p>$numero é maior que 20.</p>";
 <h2>Composta (if/else)</h2>
 <?php
 //Controle de Estoque
-$produto = "Ultrabook Dell";
-$qtdEmEstoque = 1; // o q temos no momento
+$produto = "Ultrabook";
+$qtdEmEstoque = 10; // o q temos no momento
 $qtdCritica = 2; // mínimo necessário
 ?>
 
@@ -52,5 +52,40 @@ if ($qtdEmEstoque < $qtdCritica) {
     echo "<p class = 'normal'>Estoque normal</p>"; 
 }
 ?>
+
+<h2>Encadeada (if, else, elseif)</h2>
+
+<?php
+// Verificando o produto para dar uma garantia
+if ($produto == "Ultrabook") {
+    $garantia = 5;
+} elseif($produto == "Geladeira"){
+    $garantia = 3;
+} elseif ($produto == "TV") {
+    $garantia = 2;
+}else {
+    $garantia = 1;
+}
+?>
+
+<p>O produto <?=$produto?> possui garantia de <?=$garantia?> ano<?php if ($garantia>1) echo "s"?>.</p>
+
+
+<h3>Encadeada usando switch/case</h3>
+<?php 
+//switch (Analise/escolha/avalie)
+switch($produto){
+    case "Ultrabook": $garantia = 5; break;
+    case "Geladeira": $garantia = 3; break;
+    case "TV": $garantia = 2; break;
+    default: $garantia = 1; break;
+}
+?>
+
+<p>Produto: <?=$produto?></p>
+<p>Garantia: <?=$garantia?></p>
+
+
+
 </body>
 </html>
