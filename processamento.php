@@ -27,8 +27,16 @@ if (empty($nome) || empty($email)) {
 <ul>
     <li>Nome: <?=$nome?></li>
     <li>Email: <?=$email?></li>
+ <!-- Se nascimento NÃO ESTIVER VAZIO -->
+    <?php if( !empty($nascimento)){ ?>
     <li>Nascimento: <?=$nascimento?></li>
+    <?php } ?>
+
+    <!-- Se mensagem NÃO ESTIVER VAZIO -->
+    <?php if( !empty($mensagem) ){ ?>
     <li>Mensagem: <?=$mensagem?></li>
+    <?php } ?>
+
 </ul>
 <?php } ?>
 </body>
